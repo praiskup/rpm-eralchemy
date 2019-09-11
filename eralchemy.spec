@@ -1,9 +1,3 @@
-# SPEC file overview:
-# https://docs.fedoraproject.org/en-US/quick-docs/creating-rpm-packages/#con_rpm-spec-file-overview
-# Fedora packaging guidelines:
-# https://docs.fedoraproject.org/en-US/packaging-guidelines/
-
-
 %global sum Entity Relation Diagrams generation tool
 %global desc \
 ERAlchemy generates Entity Relation (ER) diagram (like the one below) from \
@@ -59,7 +53,7 @@ Summary:        %sum
 
 %files -n python3-%name
 %_bindir/eralchemy
-%python3_sitelib/ERAlchemy-1.2.10-py3.7.egg-info
+%python3_sitelib/ERAlchemy-%version-*.egg-info
 %python3_sitelib/eralchemy/*.py
 %python3_sitelib/eralchemy/__pycache__
 
