@@ -6,7 +6,7 @@ databases or from SQLAlchemy models.
 
 Name:           eralchemy
 Version:        1.2.10
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -52,13 +52,15 @@ Summary:        %sum
 
 
 %files -n python3-%name
-%_bindir/eralchemy
 %python3_sitelib/ERAlchemy-%version-*.egg-info
 %python3_sitelib/eralchemy/*.py
 %python3_sitelib/eralchemy/__pycache__
 
 
 %changelog
+* Tue Sep 17 2019 Pavel Raiskup <praiskup@redhat.com> - 1.2.10-2
+- keep the %%_bindir script only in 'eralchemy' package (rhbz#1750263)
+
 * Wed Sep 11 2019 Pavel Raiskup <praiskup@redhat.com> - 1.2.10-1
 - apply review fixes (rhbz#1750263)
 
